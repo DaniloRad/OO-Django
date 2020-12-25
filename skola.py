@@ -1,3 +1,4 @@
+import json
 class School:
     def __init__(self, title, location):
         self.title = title
@@ -25,7 +26,7 @@ skola1 = School("Petar Petrovic", "Danilovgrad")
 skola2 = School("Marka Miljanova", "Podgorica")
 
 student1 = Student(16,"Danilo",skola1)
-student1 = Student(17,"Luka",skola2)
+student2 = Student(17,"Luka",skola2)
 
 matematika = Subject("matematika")
 racunari = Subject("racunari")
@@ -38,3 +39,18 @@ profesor1.name = "Milosav"
 profesor1.school = skola2
 print(profesor1)
 print(student1)
+data = {}
+data['schools'] = [
+    {'name':skola1.title,'location':skola1.location},
+    {'name':skola2.title,'location':skola2.location}
+]
+data['students'] = [
+    {'name':student1.name,'age':student1.age,'school':student1.school.title},
+    {'name':student2.name,'age':student2.age,'school':student2.school.title}
+]
+data['profesors'] = [
+    {'name':profesor1.name,'age':profesor1.age,'school':profesor1.school.title,'predmet':profesor1.subject.title},
+    {'name':profesor2.name,'age':profesor2.age,'school':profesor2.school.title,'predmet':profesor2.subject.title}
+]
+with open('data.txt', 'w') as outfile:
+    json.dump(data, outfile)

@@ -1,0 +1,38 @@
+{
+    "schools": [
+        {
+            "name": "Petar Petrovic",
+            "location": "Danilovgrad"
+        },
+        {
+            "name": "Marka Miljanova",
+            "location": "Podgorica"
+        }
+    ],
+    "students": [
+        {
+            "name": "Danilo",
+            "age": 16,
+            "school": "Petar Petrovic"
+        },
+        {
+            "name": "Luka",
+            "age": 17,
+            "school": "Marka Miljanova"
+        }
+    ],
+    "profesors": [
+        {
+            "name": "Milosav",
+            "age": 41,
+            "school": "Marka Miljanova",
+            "predmet": "matematika"
+        },
+        {
+            "name": "Milijana",
+            "age": 56,
+            "school": "Marka Miljanova",
+            "predmet": "racunari"
+        }
+    ]
+}
