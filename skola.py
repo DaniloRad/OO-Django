@@ -52,5 +52,5 @@ data['profesors'] = [
     {'name':profesor1.name,'age':profesor1.age,'school':profesor1.school.title,'predmet':profesor1.subject.title},
     {'name':profesor2.name,'age':profesor2.age,'school':profesor2.school.title,'predmet':profesor2.subject.title}
 ]
-with open('data.txt', 'w') as outfile:
+with open('data.json', 'w') as outfile:
     json.dump(data, outfile)
