@@ -13,7 +13,6 @@ class Student:
         return (f'{self.name} {self.school.title} {self.age}')
 
 class Profesor(Student):
-    pass
     def __init__(self, age, name, school, subject):
         super().__init__(age, name, school)
         self.subject = subject
